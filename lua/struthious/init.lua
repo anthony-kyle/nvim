@@ -1,2 +1,3 @@
 require("struthious.remap")
-print("Hello Struthious")
+require("struthious.set")
+
