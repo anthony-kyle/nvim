@@ -49,7 +49,8 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-
+vim.keymap.set("n", "<leader>t", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<leader>T", "<cmd>bprev<CR>")
 
 
 

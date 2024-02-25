@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
   use ( 'theprimeagen/harpoon' )
   use ( 'mbbill/undotree' )
   use ( 'tpope/vim-fugitive' )
+  use ( 'tpope/vim-commentary' )
+  use ( 'github/copilot.vim' )
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
@@ -34,5 +36,9 @@ return require('packer').startup(function(use)
 		  {'hrsh7th/cmp-nvim-lsp'},
 		  {'L3MON4D3/LuaSnip'},
 	  }
+  }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 end)
