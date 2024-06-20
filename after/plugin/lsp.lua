@@ -1,7 +1,10 @@
 local lsp_zero = require('lsp-zero')
+local navic = require('nvim-navic')
 
 lsp_zero.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
+  lsp_zero.default_keymaps({ buffer = bufnr })
+  local opts = {buffer = bufnr, remap = false
+  }
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -13,6 +16,10 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+  if client.server_capabilities.documentSymbolProvider then
+    navic.attach(client, bufnr)
+  end
 end)
 
 -- to learn how to use mason.nvim with lsp-zero
@@ -37,6 +44,7 @@ local cmp_select = {behavior = cmp.SelectBehavior.Select}
 require('luasnip.loaders.from_vscode').lazy_load()
 
 cmp.setup({
+
   sources = {
     {name = 'path'},
     {name = 'nvim_lsp'},
@@ -48,7 +56,16 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-y>'] = cmp.mapping.confirm({ select = false }),
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  snippet = {
+    expand = function(args)
+      require('luasnip').lsp_expand(args.body)
+    end,
+  }
 })

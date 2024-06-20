@@ -41,4 +41,11 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use "stevearc/oil.nvim"
+  use 'nvim-tree/nvim-web-devicons'
+  use "lukas-reineke/indent-blankline.nvim"
+  use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
+  }
 end)
