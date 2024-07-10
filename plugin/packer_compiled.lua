@@ -130,6 +130,11 @@ _G.packer_plugins = {
     path = "/Users/anthonymcgrath/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nvim-blame-line"] = {
+    loaded = true,
+    path = "/Users/anthonymcgrath/.local/share/nvim/site/pack/packer/start/nvim-blame-line",
+    url = "https://github.com/tveskag/nvim-blame-line"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/anthonymcgrath/.local/share/nvim/site/pack/packer/start/nvim-cmp",

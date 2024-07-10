@@ -56,4 +56,5 @@ return require('packer').startup(function(use)
       codewindow.apply_default_keybinds()
     end,
   }
+  use 'tveskag/nvim-blame-line';
 end)
