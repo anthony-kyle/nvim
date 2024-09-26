@@ -56,3 +56,5 @@ end)
 vim.keymap.set("n", "<leader>t", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<leader>T", "<cmd>bprev<CR>")
 
+vim.keymap.set("n", "<leader>pe", "<cmd>lua vim.diagnostic.open_float()<CR>")
+
