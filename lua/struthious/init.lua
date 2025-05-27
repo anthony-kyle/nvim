@@ -31,3 +31,6 @@ require('lazy').setup {
   },
 }
 
+-- Set colorscheme after plugins are loaded
+vim.cmd.colorscheme 'catppuccin-macchiato'
+
