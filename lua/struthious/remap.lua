@@ -1,6 +1,7 @@
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>pv', '<CMD>Oil<CR>', { desc = 'Open parent dir' })
 vim.keymap.set('n', '<leader>pc', '<CMD>Oil --float <CR>', { desc = 'Open parent dir' })
+vim.keymap.set('n', '-', '<CMD>Oil --float <CR>', { desc = 'Open parent dir' })
 
 vim.keymap.set('n', '<C-w>w', '<CMD>bdelete<CR>', { desc = 'Close buffer' })
 
