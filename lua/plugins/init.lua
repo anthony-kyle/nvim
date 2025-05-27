@@ -2,8 +2,16 @@
 -- Each plugin is defined in its own file
 
 return {
-  -- Core lazy.nvim plugin (no need to add it to the plugins list, it's already loaded)
+  -- Core plugins that need to be loaded directly
   'nvim-tree/nvim-web-devicons',
-  -- {'folke/lazy.nvim'},
+
+  -- Dependencies that might be needed by multiple plugins
+  'nvim-lua/plenary.nvim',
+
+  -- Neodev for better Lua development
+  {
+    'folke/neodev.nvim',
+    opts = {},
+  },
 }
 
