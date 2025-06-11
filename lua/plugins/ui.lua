@@ -12,6 +12,7 @@ return {
         },
         sections = {
           lualine_a = { { 'buffers' } },
+          lualine_b = { { 'diagnostics', sources = { 'nvim_lsp' } } },
         },
       }
     end,
