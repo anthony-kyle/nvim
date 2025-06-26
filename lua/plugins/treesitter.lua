@@ -1,10 +1,11 @@
 return {
   {
     'nvim-treesitter/nvim-treesitter',
-    lazy = false,
+    -- optional: run `:TSUpdate` on plugin load
     build = ':TSUpdate',
-    branch = 'main',
+    lazy = false,
   },
-  { 'nvim-treesitter/playground' },
+  {
+    "nvim-treesitter/playground",
+  },
 }
-

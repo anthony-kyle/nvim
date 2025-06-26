@@ -31,6 +31,22 @@ require('lazy').setup {
   },
 }
 
+require('nvim-treesitter.configs').setup {
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true,
+  },
+  autotag = {
+    enable = true,
+  },
+  rainbow = {
+    enable = true,
+    extended_chars = true,
+  },
+}
+
 -- Set colorscheme after plugins are loaded
 vim.cmd.colorscheme 'catppuccin-macchiato'
-
+require('telescope').load_extension('fzf')
