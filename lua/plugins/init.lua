@@ -1,17 +1,9 @@
--- This file ensures that lazy.nvim will find all plugin modules
--- Each plugin is defined in its own file
-
 return {
-  -- Core plugins that need to be loaded directly
+  -- Load plugins with no config
+  'tpope/vim-sleuth',
+  'tpope/vim-haml',
+  'nvim-lua/plenary.nvim',
   'nvim-tree/nvim-web-devicons',
 
-  -- Dependencies that might be needed by multiple plugins
-  'nvim-lua/plenary.nvim',
-
-  -- Neodev for better Lua development
-  {
-    'folke/neodev.nvim',
-    opts = {},
-  },
+  { 'numToStr/Comment.nvim', opts = {} }, -- "gc" to comment visual regions/lines
 }
-
