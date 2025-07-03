@@ -50,7 +50,7 @@ function M.should_setup_lsp()
 end
 
 function M.config_file_exists(root_dir, config_files)
-  local helpers = require 'dajabe.helpers'
+  local helpers = require 'struthious.helpers'
   for config_file in pairs(config_files) do
     if helpers.project_file_exists(root_dir, config_file) then
       return true
