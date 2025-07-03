@@ -17,7 +17,7 @@ end, { desc = 'Copy current file path to system clipboard' })
 
 -- Show messages in Telescope picker
 vim.keymap.set('n', '<leader>ce', function()
-  require('dajabe.messages').show_messages_picker()
+  require('struthious.messages').show_messages_picker()
 end, { desc = 'Show messages in Telescope picker' })
 
 -- Diagnostic keymaps

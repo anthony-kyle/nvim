@@ -1,6 +1,6 @@
 local utils = require 'plugins.lsp.utils'
 local util = require 'lspconfig/util'
-local helpers = require 'dajabe.helpers'
+local helpers = require 'struthious.helpers'
 
 return {
   denols = utils.create_server_config {
